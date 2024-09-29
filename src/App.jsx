@@ -1,6 +1,7 @@
 import Header from "./components/header/Header";
 import Intro from "./components/intro/Intro";
 import Services from "./components/services/Services";
+import Contact from "./components/Contact";
 import "./App.css";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <main>
         <Intro />
         <Services />
+        <Contact />
       </main>
     </>
   );
