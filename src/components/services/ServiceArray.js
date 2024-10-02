@@ -1,7 +1,7 @@
 const serviceArray = [{
   name: "Residential",
   description: "Design your dream house; customized to meet your best living experience",
-  icon: "buildings"
+  icon: "home-alt"
 },{
   name: "Commercial",
   description: "Design your business and industrial spaces; customized to meet the best customer experience",
