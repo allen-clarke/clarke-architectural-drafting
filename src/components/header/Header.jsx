@@ -10,7 +10,7 @@ const Header = () => {
             alt="Clarke Drafting logo"
             className="h-10 w-10 rounded-full"
           />
-          <p className="text-black text-3xl font-black ml-1 anton-sc cursor-default">
+          <p className="text-black text-3xl md:text-4xl font-black ml-1 anton-sc cursor-default">
             Clarke Drafting
           </p>
         </div>

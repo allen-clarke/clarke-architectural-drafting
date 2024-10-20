@@ -1,16 +1,16 @@
-import { contactPlatforms } from "./ContactPlatforms";
+import { contactPlatforms, copyrightSections } from "./arrays";
 
 const Footer = () => {
   return (
     <footer className="bg-black py-2.5 px-3.5">
       <div className="flex flex-col">
         <div className="flex justify-start items-center">
-          <p className="text-white text-2xl font-bold uppercase anton-sc cursor-default">
+          <p className="text-white text-2xl md:text-3xl font-bold uppercase anton-sc cursor-default">
             Clarke Drafting
           </p>
         </div>
         <div>
-          <p className="font-extralight font-sans text-white pt-4 cursor-default">
+          <p className="font-extralight font-sans text-white pt-4 cursor-default md:text-2xl">
             Clarke Drafting is an architectural agency specialised in designing
             houseplans of all kinds.
             <br /> At our agency, we are passionate about crafting plans that
@@ -22,6 +22,7 @@ const Footer = () => {
             return (
               <a
                 href={platform.href}
+                target="_blank"
                 className="text-white rounded-full h-10 w-10 flex place-items-center justify-center"
                 key={index}
               >
@@ -32,20 +33,18 @@ const Footer = () => {
         </div>
       </div>
       <hr className="mt-10" />
-      <div className="flex flex-col justify-between content-center items-center mt-2 pb-6">
-        <div>
-          <p className="flex items-center text-white font-bold font-sans cursor-default">
-            <i className="bx bx-current-location bx-sm mr-0.5"></i>Buchanan |
-            Grand Bassa | Liberia
-          </p>
-        </div>
-        <div>
-          <p className="flex items-center text-white font-bold font-sans cursor-default">
-            <i className="bx bx-copyright bx-sm mr-0.5"></i>2024 Clarke
-            Drafting. All rights reserved
-          </p>
-        </div>
-      </div>
+      <section className="flex flex-col justify-between content-center items-center mt-2 pb-6">
+        {copyrightSections.map((section, index) => {
+          return (
+            <div key={index}>
+              <p className="flex items-center text-white font-bold font-sans cursor-default md:text-2xl">
+                <i className={"mr-0.5 bx bx-sm bx-" + section.icon}></i>
+                {section.text}
+              </p>
+            </div>
+          );
+        })}
+      </section>
     </footer>
   );
 };

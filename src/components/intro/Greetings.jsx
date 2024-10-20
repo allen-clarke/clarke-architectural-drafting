@@ -12,7 +12,7 @@ const Greetings = () => {
       <h1 className="text-white text-5xl font-black pt-12 px-4 anton-sc cursor-default">
         We Build Your Dream Place Come True
       </h1>
-      <p className="font-black font-mono text-white pt-1 px-4 mb-6 cursor-default">
+      <p className="font-black font-mono text-white pt-1 px-4 mb-6 cursor-default md:text-2xl">
         Crafting your idea into stunning architectural master plan
       </p>
 
@@ -21,7 +21,7 @@ const Greetings = () => {
           to="contact-sec"
           smooth={true}
           duration={500}
-          className="font-black font-sans text-white rounded-2xl p-2 ml-4 border border-amber-50 backdrop-blur-2xl cursor-default"
+          className="font-black font-sans text-white rounded-2xl p-2 ml-4 border border-amber-50 backdrop-blur-2xl cursor-pointer"
         >
           Contact Us
         </Link>

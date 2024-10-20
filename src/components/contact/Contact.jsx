@@ -21,13 +21,14 @@ const Contact = () => {
     >
       <div className="flex flex-col justify-around">
         <div className="flex justify-center">
-          <p className="text-white font-black font-sans text-2xl pb-2 cursor-default">
+          <p className="text-white font-black font-sans text-2xl md:text-3xl pb-2 cursor-default">
             Have a dream project ?
           </p>
         </div>
         <div className="flex justify-center">
-          <p className="font-black font-mono text-white py-1 px-4 cursor-default">
-            Let&apos;s talk. Share your idea and get it transformed into reality
+          <p className="font-black font-mono text-white py-1 px-4 cursor-default md:text-2xl">
+            Let&apos;s talk. Share your idea and get it transformed into
+            reality.
           </p>
         </div>
         <div className=" relative flex justify-center pt-1">
