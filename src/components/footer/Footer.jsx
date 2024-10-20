@@ -37,7 +37,7 @@ const Footer = () => {
         {copyrightSections.map((section, index) => {
           return (
             <div key={index}>
-              <p className="flex items-center text-white font-bold font-sans cursor-default md:text-2xl">
+              <p className="flex items-center text-white text-center font-bold font-sans cursor-default md:text-2xl">
                 <i className={"mr-0.5 bx bx-sm bx-" + section.icon}></i>
                 {section.text}
               </p>

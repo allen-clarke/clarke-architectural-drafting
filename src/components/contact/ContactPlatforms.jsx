@@ -1,4 +1,4 @@
-const ContactPlatforms = () => {
+const ContactPlatforms = ({ linkVisibility }) => {
   const contactPlatforms = [
     {
       href: "#",
@@ -28,8 +28,11 @@ const ContactPlatforms = () => {
             href={platform.href}
             target="_blank"
             className={
-              "text-white rounded-full h-10 w-10 flex place-items-center justify-center backdrop-blur-2xl ml-1 invisible transition-1000 " +
-              platform.transitionDelay
+              linkVisibility === "invisible"
+                ? "text-white rounded-full h-10 w-10 flex place-items-center justify-center backdrop-blur-2xl ml-1 invisible transition-1000 " +
+                  platform.transitionDelay
+                : "text-white rounded-full h-10 w-10 flex place-items-center justify-center backdrop-blur-2xl bg-stone-400 ml-1 visible transition-1000 " +
+                  platform.transitionDelay
             }
             key={index}
           >
