@@ -1,4 +1,4 @@
-import logo from "../../assets/clarke-drafting-logo-black.png";
+import logo from "../../assets/clarke-drafting-logo.png";
 
 const Header = () => {
   return (
