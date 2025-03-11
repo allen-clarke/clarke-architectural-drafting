@@ -1,4 +1,4 @@
-import serviceArray from "./ServiceArray";
+import serviceArray from "../arrays/services";
 
 const Services = () => {
   return (

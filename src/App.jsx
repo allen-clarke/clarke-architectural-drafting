@@ -1,20 +1,17 @@
-import Header from "./components/header/Header";
-import Intro from "./components/intro/Intro";
-import Services from "./components/services/Services";
-import Contact from "./components/contact/Contact";
-import Footer from "./components/footer/Footer";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Layout from "./Layout";
+import HomePage from "./pages/HomePage";
 import "./App.css";
+
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Intro />
-        <Services />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

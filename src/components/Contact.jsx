@@ -1,9 +1,9 @@
 import { useState } from "react";
-import background from "../../assets/contact-bg.jpg";
-import ContactPlatforms from "./ContactPlatforms";
+import background from "../assets/contact-bg.jpg";
+import contactPlatforms from "../arrays/contactPlatforms";
 
 const Contact = () => {
-  const [linkVisibility, setLinkVisibility] = useState("invisible");
+  const [linksAreVisible, setLinksAreVisible] = useState(false);
 
   return (
     <section
@@ -32,15 +32,36 @@ const Contact = () => {
               const contactLinks =
                 document.querySelectorAll(".contact-div > a");
               contactLinks.forEach(() =>
-                linkVisibility === "invisible"
-                  ? setLinkVisibility("visible")
-                  : setLinkVisibility("invisible")
+                !linksAreVisible
+                  ? setLinksAreVisible(true)
+                  : setLinksAreVisible(false)
               );
             }}
           >
             Contact Us
           </button>
-          <ContactPlatforms linkVisibility={linkVisibility} />
+
+          <div
+            className="flex justify-start items-center rounded-2xl px-1.5 mt-3 ml-1.5 absolute contact-div"
+            style={{ top: "-46px" }}
+          >
+            {contactPlatforms.map((platform, index) => {
+              return (
+                <a
+                  href={platform.linkAddress}
+                  target="_blank"
+                  className={
+                    !linksAreVisible
+                      ? `text-white rounded-full h-10 w-10 flex place-items-center justify-center backdrop-blur-2xl ml-1 invisible transition-1000 ${platform.transitionDelay}`
+                      : `text-white rounded-full h-10 w-10 flex place-items-center justify-center backdrop-blur-2xl bg-stone-400 ml-1 visible transition-1000 ${platform.transitionDelay}`
+                  }
+                  key={index}
+                >
+                  <i className={`bx ${platform.icon} bx-md bx-tada`}></i>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
